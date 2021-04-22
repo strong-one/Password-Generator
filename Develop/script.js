@@ -26,6 +26,8 @@ var symbols = "~`!@#$%^&*()_-+=[]{}|/?><,.";
 function writePassword(password) {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_-+=[]{}|/?><,.";
 
   passwordText.value = password;
 }
