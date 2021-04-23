@@ -36,8 +36,13 @@ function writePassword() {
     alert("Your password is out of range");
     return;
   }
+  //need to set variables for user choices, pulled from global variables
+  var wantNum = confirm("Want Numbers?");
+  var wantUppers = confirm("Want Uppercase?");
+  var wantLowers = confirm("Want Lowercase?");
+  var wantSymbols = confirm("Want Symbols?");
 
-  console.log(length);
+  console.log(wantNum);
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
