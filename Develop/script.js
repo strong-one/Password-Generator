@@ -59,6 +59,13 @@ function writePassword() {
     possibilities = addSymbols + addSymbols;
   }
 
+  console.log(possibilities);
+  // password = possibilities
+  var password = "";
+  //pick randomly from the possibilities and create password
+  for (let i = 0; i < length; i++) {
+    var random = Math.random();
+  }
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
