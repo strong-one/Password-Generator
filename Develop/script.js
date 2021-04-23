@@ -33,7 +33,8 @@ function writePassword() {
   var length = prompt("What is password length?"); // gives string
 
   if (length < 8 || length > 128) {
-    prompt("Your password is out of range");
+    alert("Your password is out of range");
+    return;
   }
 
   console.log(length);
