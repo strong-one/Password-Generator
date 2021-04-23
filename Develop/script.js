@@ -30,20 +30,20 @@ var possibilities = "";
 function generatePassword() {
   // collect user data
   // length var storing length of user input and computer response
-  var length = prompt("What is password length?"); // gives string
+  var length = parseInt(prompt("What is password length?")); // gives string
 
   if (length < 8 || length > 128) {
     alert("Your password is out of range");
     return;
   }
   //need to set variables for user choices, pulled from global variables
-  var wantNum = confirm("Want Numbers?"); // boolean
+  var wantNumbers = confirm("Want Numbers?"); // boolean
   var wantUppers = confirm("Want Uppercase?"); //boolean
   var wantLowers = confirm("Want Lowercase?"); //boolean
   var wantSymbols = confirm("Want Symbols?"); //boolean
 
   //this is saying that if user wants numbers possibilities plus addNum(var in global) equals a possibility
-  if (wantNum) {
+  if (wantNumbers) {
     possibilities = possibilities + addNumbers;
   }
 
@@ -59,7 +59,6 @@ function generatePassword() {
     possibilities = addSymbols + addSymbols;
   }
 
-  console.log(possibilities);
   // password = possibilities
   var password = "";
   //pick randomly from the possibilities and create password
