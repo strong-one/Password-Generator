@@ -20,7 +20,7 @@ var generateBtn = document.querySelector("#generate");
 // need to add variables for password
 var addUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 var addLower = ["abcdefghijklmnopqrstuvwxyz"];
-var addNum = ["1234567890"];
+var addNumbers = ["1234567890"];
 var addSymbols = ["~`!@#$%^&*()_-+={[}]|:;?/>.<,"];
 
 // used for all possible outcomes
@@ -37,12 +37,27 @@ function writePassword() {
     return;
   }
   //need to set variables for user choices, pulled from global variables
-  var wantNum = confirm("Want Numbers?");
-  var wantUppers = confirm("Want Uppercase?");
-  var wantLowers = confirm("Want Lowercase?");
-  var wantSymbols = confirm("Want Symbols?");
+  var wantNum = confirm("Want Numbers?"); // boolean
+  var wantUppers = confirm("Want Uppercase?"); //boolean
+  var wantLowers = confirm("Want Lowercase?"); //boolean
+  var wantSymbols = confirm("Want Symbols?"); //boolean
 
-  console.log(wantNum);
+  //this is saying that if user wants numbers possibilities plus addNum(var in global) equals a possibility
+  if (wantNum) {
+    possibilities = possibilities + addNumbers;
+  }
+
+  if (wantUppers) {
+    possibilities = possibilities + addUpper;
+  }
+
+  if (wantLowers) {
+    possibilities = possibilities + addLower;
+  }
+
+  if (wantSymbols) {
+    possibilities = addSymbols + addSymbols;
+  }
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
