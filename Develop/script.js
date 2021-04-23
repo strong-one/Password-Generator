@@ -64,8 +64,11 @@ function writePassword() {
   var password = "";
   //pick randomly from the possibilities and create password
   for (let i = 0; i < length; i++) {
-    var random = Math.random();
+    // picking random number based on the length of pass user inputs muntiplied by the possibilities(upper, lower, symbols, and numbers)
+    // Math.floor = Math.random rounded to nearest whole number, (Math.random can generate decimals)
+    var random = Math.floor(Math.random() * possibilities.length);
   }
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
