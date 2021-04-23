@@ -24,6 +24,7 @@ var addNumbers = ["1234567890"];
 var addSymbols = ["~`!@#$%^&*()_-+={[}]|:;?/>.<,"];
 
 // used for all possible outcomes
+// initialze as empty so user has choices
 var possibilities = "";
 
 // Write password to the #password input
@@ -54,9 +55,9 @@ function generatePassword() {
   if (wantLowers) {
     possibilities = possibilities + addLower;
   }
-
+  console.log(possibilities);
   if (wantSymbols) {
-    possibilities = addSymbols + addSymbols;
+    possibilities = possibilities + addSymbols;
   }
 
   // password = possibilities
@@ -64,7 +65,7 @@ function generatePassword() {
   //pick randomly from the possibilities and create password
   for (let i = 0; i < length; i++) {
     // picking random number based on the length of pass user inputs muntiplied by the possibilities(upper, lower, symbols, and numbers)
-    // Math.floor = Math.random rounded to nearest whole number, (Math.random can generate decimals)
+    // Math.floor = Math.random rounds down, (Math.random can generate decimals)
     var random = Math.floor(Math.random() * possibilities.length);
     // this variable stores the possibilities (U,L,#,S) chooses them at random, [random] math uses equasion above to generate number
     var randChar = possibilities[random];
