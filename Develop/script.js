@@ -67,6 +67,10 @@ function writePassword() {
     // picking random number based on the length of pass user inputs muntiplied by the possibilities(upper, lower, symbols, and numbers)
     // Math.floor = Math.random rounded to nearest whole number, (Math.random can generate decimals)
     var random = Math.floor(Math.random() * possibilities.length);
+    // this variable stores the possibilities (U,L,#,S) chooses them at random, [random] math uses equasion above to generate number
+    var randChar = possibilities[random];
+    // this says password + randChar = password, combines the local variables into one "password"
+    password = password + randChar;
   }
 
   var password = generatePassword();
