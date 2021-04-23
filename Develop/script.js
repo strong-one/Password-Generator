@@ -12,22 +12,21 @@
 
 // }
 
-// // Add event listener to generate button
+// Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var abdUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var abdLower = "abcdefghijklmnopqrstuvwxyz";
-var num = "0123456789";
-var symbols = "~`!@#$%^&*()_-+=[]{}|/?><,.";
+// need to add variables for password
+var addUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var addLower = ["abcdefghijklmnopqrstuvwxyz"];
+var addNum = ["1234567890"];
+var addSymbols = ["~`!@#$%^&*()_-+={[}]|:;?/>.<,"];
 
 // Write password to the #password input
-function writePassword(password) {
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_-+=[]{}|/?><,.";
 
   passwordText.value = password;
 }
