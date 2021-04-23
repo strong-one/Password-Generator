@@ -30,7 +30,11 @@ var possibilities = "";
 function writePassword() {
   // collect user data
   // length var storing length of user input and computer response
-  var length = prompt("What is password length?");
+  var length = prompt("What is password length?"); // gives string
+
+  if (length < 8 || length > 128) {
+    prompt("Your password is out of range");
+  }
 
   console.log(length);
 
