@@ -27,7 +27,7 @@ var addSymbols = ["~`!@#$%^&*()_-+={[}]|:;?/>.<,"];
 var possibilities = "";
 
 // Write password to the #password input
-function writePassword() {
+function generatePassword() {
   // collect user data
   // length var storing length of user input and computer response
   var length = prompt("What is password length?"); // gives string
@@ -73,7 +73,12 @@ function writePassword() {
     password = password + randChar;
   }
 
+  return password;
+}
+
+function writePassword() {
   var password = generatePassword();
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
