@@ -23,8 +23,17 @@ var addLower = ["abcdefghijklmnopqrstuvwxyz"];
 var addNum = ["1234567890"];
 var addSymbols = ["~`!@#$%^&*()_-+={[}]|:;?/>.<,"];
 
+// used for all possible outcomes
+var possibilities = "";
+
 // Write password to the #password input
 function writePassword() {
+  // collect user data
+  // length var storing length of user input and computer response
+  var length = prompt("What is password length?");
+
+  console.log(length);
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
