@@ -55,7 +55,7 @@ function generatePassword() {
   if (wantLowers) {
     possibilities = possibilities + addLower;
   }
-  console.log(possibilities);
+
   if (wantSymbols) {
     possibilities = possibilities + addSymbols;
   }
